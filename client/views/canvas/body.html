@@ -1,0 +1,22 @@
+<template name="canvasBody">
+  <div class="body">
+    {{> canvasWrapper}}
+    <div class="brush-wrapper">
+      <div class="color-picker sp-icon-custom" data-tooltip="Color Picker<br /><span class='font-normal'>Select a color to paint on the canvas</span>" data-tooltip-anchor="right" data-tooltip-color="gray">
+        <input type='color' class='cp-input' />
+      </div>
+      <div class='brush cp-icon' data-tooltip="Brush [C]" data-tooltip-anchor="right" data-tooltip-color="gray"></div>
+    </div>
+    <div class='eye-dropper' data-tooltip="Eye Dropper [D]" data-tooltip-anchor="right" data-tooltip-color="gray"></div>
+    <div class='eraser' data-tooltip="Eraser [E]" data-tooltip-anchor="right" data-tooltip-color="gray"></div>
+  </div>
+</template>
+
+<template name="canvasWrapper">
+  <div class='canvas-wrapper'>
+    <div class='canvas-container'>
+      <canvas id='canvas' class='canvas base-layer-canvas' style='z-index: 0;' />
+      <canvas id='grid-canvas' class='canvas grid-layer-canvas' width='600' height='400'  style='z-index: 1;' />
+    </div>
+  </div>
+</template>

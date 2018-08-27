@@ -1,0 +1,19 @@
+<template name="indexHome">
+  <div class="dialog">
+    <h1 class="headline logotype">We the Pixels</h1>
+    <h2 class="slogan">Real-time, collaborative pixel art.</h2>
+    {{> primaryActions}}
+  </div>
+</template>
+
+<template name="primaryActions">
+  <div class="primary-actions">
+    {{#if isValidUser}}
+    <a href="/new" class="button button-gray new-canvas" rel="transition-content">New Canvas</a>
+    <br />
+    <a href="/canvas/{{ featuredCanvasId }}" class="paint-now secondary-action-anchor traditional-link">Paint Now</a>
+    {{else}}
+    <a href="/canvas/{{ featuredCanvasId }}" class="button button-gray paint-now">Paint Now</a>
+    {{/if}}
+  </div>
+</template>

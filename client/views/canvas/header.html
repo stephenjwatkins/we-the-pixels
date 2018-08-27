@@ -1,0 +1,32 @@
+<template name="canvasHeader">
+  <div class="canvas-header">
+    <div class="canvas-header-left group">
+      <a href="/" class="back-icon"><i></i></a>
+      <div class="subject-title">{{ subject }}</div>
+      {{#if owner}}
+      <div class="visionary">envisioned by <strong>{{ owner }}</strong></div>
+      {{/if}}
+    </div>
+    <div class="canvas-header-right group">
+      <div class="loading"></div>
+      <div class="artist-count group" data-tooltip="Number of users currently in this canvas" data-tooltip-anchor="bottom" data-tooltip-color="blue">
+        <i>Artists</i>
+        <span class="count">1</span>
+      </div>
+      <div class="canvas-sharing group" data-tooltip="Share" data-tooltip-anchor="bottom" data-tooltip-color="gray">
+        <ul class="canvas-sharing-list group" style="max-width: 0;">
+          <li class="canvas-sharing-list-item google-plus">
+            <a href="https://plus.google.com/share?url={{ share.url }}" target="_blank"></a>
+          </li>
+          <li class="canvas-sharing-list-item twitter">
+            <a href="https://twitter.com/share?url={{ share.url }}&amp;text={{ share.text }}" target="_blank"></a>
+          </li>
+          <li class="canvas-sharing-list-item facebook">
+            <a href="http://www.facebook.com/sharer/sharer.php?s=100&amp;p[title]={{ share.title }}&amp;p[url]={{ share.url }}&amp;p[summary]={{ share.text }}" target="_blank"></a>
+          </li>
+        </ul>
+        <i></i>
+      </div>
+    </div>
+  </div>
+</template>

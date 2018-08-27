@@ -1,0 +1,165 @@
+spacing = 24px
+icon-size = 40px
+icon-gutter = (spacing / 2)
+color-palette-size = icon-size
+
+.canvas-page
+  background url('../../images/canvas-bg.png') repeat
+  -webkit-touch-callout none
+  -webkit-user-select none
+  -khtml-user-select none
+  -moz-user-select none
+  -ms-user-select none
+
+  .canvas-wrapper
+    user-select none
+    position absolute
+    top spacing
+    bottom spacing
+    left (spacing * 2) + icon-size + 32px
+    right spacing
+
+  .base-layer-canvas
+    background rgba(255, 255, 255, .6)
+
+  .body
+    position absolute
+    top 60px
+    left 0
+    right 0
+    bottom 0
+
+  .canvas-container
+    cursor pointer
+    &.tool-c-cursor
+      cursor url('/images/brush-2-24.png') 2 23, pointer
+    &.tool-d-cursor
+      cursor url('/images/eye-dropper-2-24.png') 1 23, pointer
+    &.tool-e-cursor
+      cursor url('/images/eraser-2-24.png') 9 22, pointer
+
+  .cp-icon
+  .eye-dropper
+  .eraser
+    background-color white
+    border-bottom 1px solid #eee
+    box-shadow 0 1px 4px rgba(0, 0, 0, .25)
+    cursor pointer
+    position absolute
+    left 24px
+    width icon-size
+    height icon-size
+    padding 8px
+    z-index 300
+    &:hover
+      background-color #eee
+    &:active
+    &.selected
+      background-color rgba(40, 110, 195, 1)
+
+  .brush-wrapper
+    position absolute
+    padding-top icon-size + spacing
+    top spacing
+    left 24px
+    width icon-size
+    height icon-size
+    transition width .2s
+
+  .color-picker
+    position absolute
+    top 0
+    left 0
+    width icon-size
+    height icon-size
+
+  .brush
+    border-top-right-radius 3px
+    border-top-left-radius 3px
+
+  .eraser
+    border-bottom 0
+    border-bottom-right-radius 3px
+    border-bottom-left-radius 3px
+
+  .eye-dropper
+  .eraser
+  .brush
+    background-position center center
+    background-repeat no-repeat
+
+  .brush
+    background-image url('/images/brush-2-16.png')
+    top icon-size + spacing
+    left 0
+    &.selected
+      background-image url('/images/brush-2-16-white.png')
+
+  .eye-dropper
+    top (icon-size + spacing) + spacing + icon-size
+    background-image url('/images/eye-dropper-2-16.png')
+    &.selected
+      background-image url('/images/eye-dropper-2-16-white.png')
+
+  .eraser
+    top (icon-size + spacing) + spacing + (icon-size * 2)
+    background-image url('/images/eraser-2-16.png')
+    &.selected
+      background-image url('/images/eraser-2-16-white.png')
+
+/*
+ Color Picker overrides
+ */
+.sp-icon-custom
+  text-align center
+  .sp-replacer
+    background none
+    border 0 solid red
+    padding 0
+    position absolute
+    top 0
+    left 0
+    margin-left ((icon-size - color-palette-size) / 2)
+  .sp-preview
+    background none
+    border 0
+    margin-right 0
+    width color-palette-size
+    height color-palette-size
+    position relative
+  .sp-dd
+    display none
+  .sp-preview-inner
+    border-radius 3px
+    box-shadow 0 1px 4px rgba(0, 0, 0, .25)
+
+.sp-container
+  background white
+  border 0
+  border-radius 3px
+  box-shadow 0 1px 4px rgba(0, 0, 0, .25)
+  padding 6px
+  top 84px !important
+  left 76px !important
+
+.sp-color
+.sp-hue
+  border 0
+
+.sp-input
+  background #ddd
+  border 0
+  border-radius 2px
+  outline none
+  &:focus
+    border 0
+
+.sp-palette-container
+  border-right 0
+  padding-right 6px
+
+.sp-palette
+  max-width 40px
+  .sp-thumb-el
+    border 1px solid #ddd !important
+    margin 2px

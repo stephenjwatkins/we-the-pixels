@@ -1,0 +1,61 @@
+list-gutter = 7px
+icon-size = 40px
+
+.gallery-page
+  
+  .body
+    margin 0 auto
+    margin-top 84px
+    padding-bottom 48px
+    max-width 960px
+
+  .canvas-list
+    list-style none
+    margin -18px 0 0 -12px
+    padding 0
+    overflow hidden
+
+  .canvas-list-item
+    float left
+    padding 18px 0
+    position relative
+    width 33.33333%
+    &:nth-of-type(n+4)
+      border-top 0 solid rgba(200, 200, 200, .25)
+
+  .canvas-list-item-anchor
+    display block
+    padding 12px
+    transition background-color .2s
+    &:hover
+      background rgba(40, 110, 195, 1)
+      .gallery-canvas
+        background rgba(240, 240, 240, .8)
+        background rgba(255, 255, 255, 1) repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(240, 240, 240, .7) 10px, rgba(240, 240, 240, .7) 20px)
+      .subject
+        color white
+
+  .gallery-canvas
+    background rgba(240, 240, 240, .8)
+    background rgba(255, 255, 255, .4) repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(240, 240, 240, .7) 10px, rgba(240, 240, 240, .7) 20px)
+    transition all .2s
+
+  .gallery-canvas-bg
+    background-position 50% 50%
+    background-repeat no-repeat
+    background-size cover
+    width 100%
+    height (300px / 16) * 9
+
+  .list-overlay
+    line-height 1.2
+    position relative
+    padding 8px 8px 0 8px
+    text-align left
+    .subject
+      font-weight 600
+      min-height 19px
+      white-space nowrap
+      overflow hidden
+      text-overflow ellipsis
+      transition color .2s

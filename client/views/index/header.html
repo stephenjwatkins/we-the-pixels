@@ -1,0 +1,24 @@
+<template name="indexHeader">
+  <header class="header group">
+    <div class="inner">
+      <div class="header-left">
+        <a href="/" rel="transition-content" class="header-logo" style="display: none;">Go Home</a>
+      </div>
+      <div class="header-right">
+        {{> indexAccount}}
+      </div>
+    </div>
+  </header>
+</template>
+
+<template name="indexAccount">
+  <div class="account-actions">
+    {{#if isValidUser}}
+    <span class="username">{{ currentUser.username }}</span>
+    <a href="/account/logout" class="logout">Logout</a>
+    {{else}}
+    <a href="/account/login" class="login" rel="transition-content">Login</a>
+    <a href="/account/register" class="register" rel="transition-content">Register</a>
+    {{/if}}
+  </div>
+</template>

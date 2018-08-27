@@ -1,0 +1,11 @@
+{
+	"public" : {
+		"s3Bucket" : "wethepixels-dev-steve",
+    "featuredCanvasId": "c"
+	},
+	"mailchimp" : {
+		"apiKey" : "77268a3d97d13e69a856857b55bc606a-us2",
+		"listId" : "fe12888527",
+		"campaignId" : "c1d8ae9fc4"
+	}
+}

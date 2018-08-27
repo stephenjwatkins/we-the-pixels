@@ -1,0 +1,11 @@
+{
+	"public" : {
+		"s3Bucket" : "wethepixels-prod",
+    "featuredCanvasId": "chaos"
+	},
+	"mailchimp" : {
+		"apiKey" : "77268a3d97d13e69a856857b55bc606a-us2",
+		"listId" : "4d09ee6680",
+		"campaignId" : "a9119ae6d2"
+	}
+}

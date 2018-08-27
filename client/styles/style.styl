@@ -1,0 +1,217 @@
+stretch(n = 0)
+  top n
+  bottom n
+  left n
+  right n
+
+*
+  -o-box-sizing border-box
+  -moz-box-sizing border-box
+  -webkit-box-sizing border-box
+  box-sizing border-box
+  -webkit-backface-visibility hidden
+
+html,
+body
+  padding 0
+  margin 0
+  min-height 100%
+
+body
+button
+input
+textarea
+select
+  font-family "proxima-nova", "Helvetica Neue", "Helvetica", "Arial", sans-serif
+  font-weight 400
+  font-size 100%
+
+body
+button
+a
+  color #777
+
+input
+textarea
+select
+  color #333
+
+a
+  text-decoration none
+  &.traditional-link
+    border-bottom 1px solid #ddd
+
+.group:after
+  content ""
+  display table
+  clear both
+
+.font-normal
+  font-weight normal
+
+.tooltip
+  border-radius 3px
+  box-shadow 0 1px 4px rgba(0, 0, 0, .25)
+  display inline-block
+  font-size .875em
+  font-weight 600
+  max-width 180px
+  padding 6px 12px
+  text-align center
+  z-index 900
+  &.tooltip-right
+    text-align left
+  &.blue
+    background rgba(40, 110, 195, 1)
+    color white
+    &.tooltip-bottom .arrow
+      border-bottom-color rgba(40, 110, 195, 1)
+    &.tooltip-right .arrow
+      border-right-color rgba(40, 110, 195, 1)
+  &.gray
+    background #eee
+    &.tooltip-bottom .arrow
+      border-bottom-color #eee
+    &.tooltip-right .arrow
+      border-right-color #eee
+  .arrow
+    display block
+    position absolute
+    width 0
+    height 0
+  &.tooltip-bottom .arrow
+    top -6px
+    left 50%
+    margin-left -6px
+    border-left 6px solid transparent
+    border-right 6px solid transparent
+    border-bottom 6px solid transparent
+  &.tooltip-right .arrow
+    left -6px
+    top 50%
+    margin-top -6px
+    border-top 6px solid transparent
+    border-bottom 6px solid transparent
+    border-right 6px solid transparent
+    
+.shade
+  background white
+  opacity .92
+  transition all .4s
+
+.body-gallery .shade
+  opacity .94
+
+.inline-block-anchor
+  display inline-block
+
+.block-anchor
+  display block
+
+.page
+.bg
+.bg-canvas
+.bg-canvas-wrapper
+.bg-canvas-container
+.canvas-container
+.canvas-wrapper
+.shade
+.overlay
+  position absolute
+  stretch()
+
+.bg
+.bg-canvas-wrapper
+.bg-canvas-shade
+  position fixed
+
+.bg-canvas
+  overflow hidden
+
+.canvas-container
+  margin 0 auto
+
+.canvas
+  position absolute
+
+.logotype
+  font-family "reklame-script", sans-serif
+  font-weight 500
+
+.bg
+  background rgba(255, 255, 255, 1)
+  -webkit-mask-image url('/images/bg-100.png')
+  -moz-mask url('/images/bg-100.png')
+  mask url('/images/bg-100.png')
+  opacity .5
+  z-index 0
+  &:after
+    background -webkit-radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, .8))
+    background -moz-radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, .8))
+    background -ms-radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, .8))
+    background radial-gradient(circle, rgba(255, 255, 255, 1), rgba(255, 255, 255, .8))
+    content " "
+    position absolute
+    stretch()
+    z-index 1
+
+.canvas-wrapper
+  z-index 100
+
+.shade
+  z-index 200
+
+.page
+  z-index 300
+
+.middle-table
+  display table
+
+.middle-cell
+  display table-cell
+
+.middle-content
+  vertical-align middle
+
+.button
+  border 0
+  border-radius 48px
+  cursor pointer
+  display inline-block
+  font-weight 600
+  letter-spacing 0
+  margin 0
+  padding 12px 30px
+  text-decoration none
+  &.loading
+    cursor default
+    font-style italic
+  &.button-gray
+    background #ddd
+    &:active
+    &.loading
+      color #555
+    &:active
+      background #ccc
+    &.loading
+      background #bbb
+
+.primary-section-title
+  color rgba(40, 110, 195, 1)
+  font-size 2.25em
+  font-weight 700
+  letter-spacing -1px
+  text-rendering optimizeLegibility
+
+.flash
+  background rgba(230, 230, 230, .8)
+  position fixed
+  top 0
+  left 0
+  right 0
+  text-align center
+  z-index 1200
+  .message
+    font-size 1em
+    display inline-block
+    padding 18px

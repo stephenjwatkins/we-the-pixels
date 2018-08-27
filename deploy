@@ -1,0 +1,38 @@
+#!/bin/bash
+
+echo "Running deployment script."
+
+DATE=$(date +"%Y-%m-%dT%H-%M-%S")
+BUNDLE_NAME="wtp.$DATE.tgz"
+
+echo "Bundling WTP."
+meteor bundle ./$BUNDLE_NAME
+
+echo "SCPing to Staging."
+scp -v ./$BUNDLE_NAME $1@stage.bitmo.co:/srv/bloojoo/wtp/releases
+
+echo "Removing locally."
+rm ./$BUNDLE_NAME
+
+echo "Unbundling at Staging."
+ssh -t $1@stage.bitmo.co "\
+cd /srv/bloojoo/wtp; \
+\
+echo \"Removing old bundle directory.\"; \
+rm -r /srv/bloojoo/wtp/bundle; \
+\
+echo \"Extracting new bundle.\"; \
+tar -zxvf ./releases/$BUNDLE_NAME; \
+\
+echo \"Reinstalling fibers.\"; \
+cd /srv/bloojoo/wtp/bundle/server; \
+sudo npm uninstall fibers; \
+sudo npm install fibers; \
+sudo service wtp restart; \
+\
+echo \"Resetting directory permissions.\"; \
+cd /srv/bloojoo/wtp; \
+chown :bloojoo -R bundle; \
+chmod g+w -R bundle; \
+\
+echo \"Successfully deployed to staging.\";"

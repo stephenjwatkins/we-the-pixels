@@ -1,0 +1,26 @@
+<template name="indexLogin">
+  <div class="dialog">
+    <div class="action primary-section-title">Login</div>
+    <div class="main-error"></div>
+    <div class="dialog-main">
+      <form method="POST" class="dialog-form login-form" action="/account/login">
+        <div class="form-input">
+          <input name="username_login" autocapitalize="off" autocorrect="off" tabindex="1" type="text" id="id_username_login" placeholder="Username or Email" data-focus data-required="true" data-error-message="Username or email required.">
+          <span class="icon-box username"></span>
+        </div>
+        <div class="form-input">
+          <input name="password_login" autocapitalize="off" autocorrect="off" tabindex="2" type="password" id="id_password_login" placeholder="Password" data-required="true" data-error-message="Password required.">
+          <span class="icon-box password"></span>
+        </div>
+        <div class="form-actions group">
+          <button type="submit" class="button button-gray" tabindex="3" data-loading-text="Logging in">Login</button>
+          <div class="submit-left">
+            <a href="/account/register" class="traditional-link" rel="transition-content">Don't have an account yet?</a>
+            <br />
+            <a href="/account/forgot" class="traditional-link" rel="transition-content">Reset password</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</template>

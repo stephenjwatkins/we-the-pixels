@@ -1,0 +1,84 @@
+.header
+  position absolute
+  top 0
+  left 20px
+  right 20px
+  height 84px
+  line-height 84px
+  transition all .25s
+  z-index 100
+  &.with-flash
+    top 58px
+  .inner
+    max-width 960px
+    margin 0 auto
+  .header-left
+    float left
+  .header-right
+    float right
+    position relative
+  .loading-canvas
+    position absolute
+    top 64px
+    right 0
+    line-height 1
+    font-size .875em
+    font-style italic
+
+.header-logo
+  background transparent url('/images/home-20.png') no-repeat left center
+  display inline-block
+  line-height 1
+  opacity .4
+  overflow hidden
+  width 32px
+  height 32px
+  line-height 32px
+  text-indent -9999999px
+  text-decoration none
+  vertical-align middle
+  &:hover
+    transition opacity .2s
+    opacity .5
+
+.account-actions
+  .username
+    display inline-block
+    line-height 1
+    padding 8px 12px
+  a
+    border-radius 50px
+    display inline-block
+    height 36px
+    line-height 36px
+    padding 0 20px
+    margin-left 0
+    text-decoration none
+    transition background-color .2s
+    white-space nowrap
+    &:hover
+      background-color rgba(230, 230, 230, .7)
+    &:first-child
+      margin-left 0
+  .login
+  .username
+  .logout
+  .register
+  .new-canvas
+    &:before
+      content " "
+      display inline-block
+      width 16px
+      height 16px
+      background-position left center
+      background-repeat no-repeat
+      opacity .75
+      padding-right 10px
+      position relative
+      top 2px
+  .login:before
+    background-image url('/images/login-1-16.png')
+  .register:before
+    background-image url('/images/register-3-16.png')
+  .logout:before
+    background-image url('/images/logout-1-16.png')

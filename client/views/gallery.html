@@ -1,0 +1,27 @@
+<template name="gallery">
+  <div class="page gallery-page">
+    {{> indexHeader}}
+    <div class="body">
+      <ul class='canvas-list'>
+        {{#each canvases}}
+          {{#if this}}
+            {{> canvasListItem}}
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</template>
+
+<template name="canvasListItem">
+  <li class="canvas-list-item">
+    <a href="/canvas/{{canvasId}}" class="canvas-list-item-anchor">
+      <div class="gallery-canvas">
+        <div class="gallery-canvas-bg"></div>
+      </div>
+      <div class="list-overlay">
+        <div class="subject">{{subject}}</div>
+      </div>
+    </a>
+  </li>
+</template>

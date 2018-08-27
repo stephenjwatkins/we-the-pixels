@@ -1,0 +1,20 @@
+<template name="indexNewCanvas">
+  <div class="dialog">
+    <div class="action primary-section-title">New Canvas</div>
+    <div class="main-error"></div>
+    <div class="dialog-main">
+      <form method="POST" class="dialog-form new-form" action="/account/login">
+        <p class="form-input">
+          <input name="subject_new" autocapitalize="off" autocorrect="off" tabindex="1" type="text" id="id_subject_new" placeholder="What would you like to paint?" data-focus data-required="true" data-rangelength="[2,50]" data-error-message="Subjects depict what will be painted (e.g. Dog, House, Mona Lisa). They need between 2 and 50 characters. Choose wisely, the subject cannot be changed!">
+          <span class="icon-box subject"></span>
+        </p>
+        <div class="form-actions group">
+          <button type="submit" class="button button-gray" tabindex="2" data-loading-text="Preparing canvas">Create canvas</button>
+          <div class="submit-left">
+            <a href="/" class="traditional-link" rel="transition-content">Cancel</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</template>

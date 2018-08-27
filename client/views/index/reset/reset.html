@@ -1,0 +1,20 @@
+<template name="indexReset">
+  <div class="dialog">
+    <div class="action primary-section-title">Change Password</div>
+    <div class="main-error"></div>
+    <div class="dialog-main">
+      <form method="POST" class="dialog-form reset-form" action="/account/reset">
+        <p class="form-input">
+          <input name="new_password_reset" autocapitalize="off" autocorrect="off" tabindex="1" type="password" id="id_new_password_reset" placeholder="New Password" data-focus data-required="true" data-minlength="6" data-error-message="Passwords require 6 or more characters.">
+          <span class="icon-box password"></span>
+        </p>
+        <div class="form-actions group">
+          <button type="submit" class="button button-gray" tabindex="2" data-loading-text="Changing password">Change password</button>
+          <div class="submit-left">
+            <a href="/account/login" class="traditional-link" rel="transition-content">Wait, I remember</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</template>

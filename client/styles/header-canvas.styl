@@ -1,0 +1,155 @@
+block-height = 30px
+block-width = 40px
+
+.canvas-page  
+  .canvas-header
+    background white
+    box-shadow 0 1px 4px rgba(0, 0, 0, .25)
+    padding 12px 24px
+    position absolute
+    top 0
+    left 0
+    right 0
+    height 60px
+
+  .canvas-header-left
+  .canvas-header-right
+    display inline-block
+    height block-height
+    line-height block-height
+    position absolute
+    top ((60px - block-height) / 2)
+
+  .canvas-header-left
+    left 24px
+
+  .canvas-header-right
+    right 24px
+
+  .canvas-header .back-icon
+    background-color transparent
+    border-radius 3px
+    float left
+    display block
+    margin-left ((40px - block-width) / 2)
+    width block-width
+    height block-height
+    position relative
+    transition background-color .2s
+    &:hover
+      background-color #eee
+    > i
+      background-image url('/images/back-3-16.png')
+      background-position center center
+      background-repeat no-repeat
+      display block
+      opacity .3
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+
+  .canvas-header .subject-title
+    float left
+    margin-left 24px
+    font-size 1.375em
+    font-weight 600
+    text-rendering optimizeLegibility
+    &.subject-title-demo
+      font-size 1em
+      font-weight 400
+
+  .canvas-header .visionary
+    float left
+    font-size .875em
+    line-height 34px
+    margin-left 24px
+
+  .canvas-header-right
+    .loading
+    .artist-count
+    .canvas-sharing
+      float left
+
+    .loading
+    .canvas-sharing i
+      width block-width
+      height block-height
+
+    .artist-count
+    .canvas-sharing
+      border-radius 3px
+
+    .artist-count
+      background-color rgba(40, 110, 195, 1)
+      color white
+      margin-left 12px
+      height block-height
+      i
+      .count
+        display block
+        float left
+        height block-height
+        line-height block-height
+        padding 0 12px
+      i
+        font-size .875em
+        font-style normal
+        padding-left 12px
+      .count
+        background-color rgba(0, 0, 0, .25)
+        border-top-right-radius 3px
+        border-bottom-right-radius 3px
+        font-weight 600
+
+    .canvas-sharing
+    .canvas-sharing i
+      display block
+
+    .canvas-sharing
+      background #eee
+      cursor pointer
+      height block-height
+      margin-left 12px
+      overflow hidden
+      &.active i
+        background-color #ccc
+        opacity .6
+      &.active .canvas-sharing-list
+          max-width 200px !important
+      i
+        background #eee url('/images/share-16.png') no-repeat center center
+        border-top-right-radius 3px
+        border-bottom-right-radius 3px
+        float left
+        opacity .4
+        transition background-color .4s, opacity .4s
+      .canvas-sharing-list
+        float left
+        list-style-type none
+        margin 0
+        padding 0
+        overflow hidden
+        transition max-width .4s
+      .canvas-sharing-list-item
+        float left
+        display block
+        a
+          border-right 1px solid #ccc
+          display block
+          opacity .4
+          width 16px + 24px
+          height block-height
+        &:first-child
+          border-right 0
+        &.facebook a
+          background url('/images/facebook-14.png') no-repeat center center
+        &.twitter a
+          background url('/images/twitter-16.png') no-repeat center center
+        &.google-plus a
+          background url('/images/google-plus-14.png') no-repeat center center
+        &.email a
+          background url('/images/email-16.png') no-repeat center center
+        &.link a
+          background url('/images/link-16.png') no-repeat center center

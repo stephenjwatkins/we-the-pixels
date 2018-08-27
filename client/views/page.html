@@ -1,0 +1,38 @@
+<head>
+  <title>We the Pixels</title>
+  <meta name="keywords" content="art, collaboration, game, pixel, image, community, team, artist, artwork, gallery, fun" />
+  <meta name="title" content="We the Pixels" />
+  <meta name="description" content="Collaborative art platform for creating pixel art. Using the power of the community, artists can create pixel art faster and more detailed than one artist working alone." />
+  <meta property="og:title" content="We the Pixels"/>
+  <meta property="og:description" content="Real-time, collaborative pixel art." />
+  <link rel="shortcut icon" href="/favicon.ico?v=1" />
+  <script type="text/javascript" src="//use.typekit.net/xmt1hda.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-21837023-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+</head>
+
+<body>
+  {{> page}}
+</body>
+
+<template name="bg">
+  {{#unless disableBg}}
+  <div class="bg"></div>
+  {{/unless}}
+</template>
+
+<template name="page">
+  {{#if pageIndex}}{{> index}}{{/if}}
+  {{#if pageCanvas}}{{> canvas}}{{/if}}
+  {{#if pageGallery}}{{> gallery}}{{/if}}
+</template>

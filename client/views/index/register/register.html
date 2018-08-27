@@ -1,0 +1,28 @@
+<template name="indexRegister">
+  <div class="dialog">
+    <div class="action primary-section-title">Register</div>
+    <div class="main-error"></div>
+    <div class="dialog-main">
+      <form method="POST" class="dialog-form register-form" action="/account/register">
+        <div class="form-input">
+          <input name="username_register" autocapitalize="off" autocorrect="off" tabindex="1" type="text" id="id_username_register" placeholder="Username" data-focus data-required="true" data-rangelength="[3,16]" data-regexp="[A-Fa-f0-9_]" data-error-message="Usernames require between 3 and 16 characters. Valid characters are letters, numbers, spaces, and underscores.">
+          <span class="icon-box username"></span>
+        </div>
+        <div class="form-input">
+          <input name="email_register" autocapitalize="off" autocorrect="off" tabindex="2" type="text" id="id_email_register" placeholder="Email" data-required="true" data-type="email" data-error-message="Valid email required. We’ll use this to verify your account.">
+          <span class="icon-box email"></span>
+        </div>
+        <div class="form-input">
+          <input name="password_register" autocapitalize="off" autocorrect="off" tabindex="3" type="password" id="id_password_register" placeholder="Password" data-required="true" data-minlength="6" data-error-message="Passwords require 6 or more characters.">
+          <span class="icon-box password"></span>
+        </div>
+        <div class="form-actions group">
+          <button type="submit" class="button button-gray" tabindex="4" data-loading-text="Creating account">Create account</button>
+          <div class="submit-left">
+            <a href="/account/login" class="traditional-link" rel="transition-content">Already have an account?</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</template>
